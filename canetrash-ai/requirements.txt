@@ -1,0 +1,24 @@
+# --- Phase 1: ai_core + backend + hardware_sim ---
+# Core runtime (required)
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.8.0
+pydantic-settings>=2.4.0
+sqlalchemy>=2.0.30
+aiosqlite>=0.20.0
+httpx>=0.27.0
+numpy>=1.26.0
+python-multipart>=0.0.9
+
+# --- Optional real-backend upgrades (all have synthetic fallbacks) ---
+# Uncomment / install as needed once real hardware & models are available.
+# ultralytics>=8.3.0        # YOLOv10 instance segmentation
+# open3d>=0.18.0            # real LiDAR volumetric processing
+# scipy>=1.13.0             # numpy-fallback convex hull volume (used if no open3d)
+# pymodbus>=3.6.0           # real RS485/TCP weighbridge
+# asyncpg>=0.29.0           # PostgreSQL async driver (prod DB instead of sqlite)
+# python-escpos>=3.1        # real ESC/POS thermal printer
+
+# --- Dev / test ---
+pytest>=8.3.0
+pytest-asyncio>=0.24.0
